@@ -5,8 +5,12 @@ title: Events
 ---
 
 # Events
-      
-{% for post in site.posts[page.category.events] %}
-      * [{{ post.title }}]({{ post.url }})
-      {{ post.excerpt }}
-{% endfor %}
+
+<ul>
+  {% for post in site.categories.events %}
+      <li>
+        <a href="{{ post.url }}">{{ post.title }}</a>
+        {{post.excerpt}}
+      </li>
+  {% endfor %}
+</ul>
